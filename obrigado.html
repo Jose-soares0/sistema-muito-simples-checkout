@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscrição Recebida</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      color: #222;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .obrigado-container {
+      width: 100%;
+      max-width: 620px;
+      background: #ffffff;
+      padding: 45px 35px;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    }
+
+    .icone {
+      width: 75px;
+      height: 75px;
+      background: #00c853;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 25px;
+      font-size: 38px;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 15px;
+      color: #111;
+    }
+
+    p {
+      font-size: 17px;
+      line-height: 1.6;
+      color: #555;
+      margin-bottom: 18px;
+    }
+
+    .aviso {
+      background: #f1f8f4;
+      border: 1px solid #c8e6c9;
+      padding: 18px;
+      border-radius: 12px;
+      margin: 25px 0;
+      color: #2e7d32;
+      font-weight: bold;
+    }
+
+    .botao-whatsapp {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 15px 28px;
+      background: #00c853;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .botao-whatsapp:hover {
+      background: #009624;
+      transform: scale(1.04);
+    }
+
+    .voltar {
+      display: block;
+      margin-top: 22px;
+      color: #777;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .voltar:hover {
+      color: #111;
+    }
+
+    @media (max-width: 600px) {
+      .obrigado-container {
+        padding: 35px 22px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="obrigado-container">
+    <div class="icone">✓</div>
+
+    <h1>Inscrição recebida com sucesso!</h1>
+
+    <p>
+      Obrigado por realizar sua inscrição. Seu pagamento foi iniciado ou concluído
+      com segurança.
+    </p>
+
+    <p>
+      Agora, nossa equipe vai verificar as informações e enviar as próximas
+      orientações pelo WhatsApp ou e-mail informado no checkout.
+    </p>
+
+    <div class="aviso">
+      Fique atento ao seu WhatsApp e e-mail para receber as instruções de acesso.
+    </div>
+
+    <p>
+      Caso tenha alguma dúvida, fale com nossa equipe pelo WhatsApp.
+    </p>
+
+    <a 
+      href="https://wa.me/5599999999999" 
+      class="botao-whatsapp"
+      target="_blank"
+    >
+      Falar no WhatsApp
+    </a>
+
+    <a href="index.html" class="voltar">
+      Voltar para a página inicial
+    </a>
+  </main>
+
+</body>
+</html>
