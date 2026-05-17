@@ -8,6 +8,30 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <section class="barra-urgencia">
+  <p>Sua oferta especial encerra em</p>
+
+  <div class="contador-topo">
+    <div class="tempo-box">
+      <span id="horas">00</span>
+      <small>HORAS</small>
+    </div>
+
+    <strong>:</strong>
+
+    <div class="tempo-box">
+      <span id="minutos">18</span>
+      <small>MIN</small>
+    </div>
+
+    <strong>:</strong>
+
+    <div class="tempo-box">
+      <span id="segundos">00</span>
+      <small>SEG</small>
+    </div>
+  </div>
+</section>
 
   <header class="hero">
     <div class="container">
@@ -16,39 +40,6 @@
         Aprenda as principais habilidades para atuar com atendimento,
         controle de acesso e segurança em ambientes profissionais.
       </p>
-      <section class="urgencia">
-  <div class="container urgencia-box">
-    <span class="urgencia-tag">Oferta por tempo limitado</span>
-
-    <h2>Sua condição especial expira em breve</h2>
-
-    <p>
-      Garanta sua inscrição agora antes que o tempo da oferta termine.
-      Após o fim da contagem, essa condição pode não estar mais disponível.
-    </p>
-
-    <div class="contador">
-      <div class="tempo">
-        <span id="minutos">18</span>
-        <small>minutos</small>
-      </div>
-
-      <div class="separador">:</div>
-
-      <div class="tempo">
-        <span id="segundos">00</span>
-        <small>segundos</small>
-      </div>
-    </div>
-
-    <a 
-      href="https://app.abacatepay.com/pay/bill_42ZJueuzwbEM5Q32RHhcfyB0" 
-      class="botao urgencia-botao"
-    >
-      Garantir minha vaga agora
-    </a>
-  </div>
-</section>
 
       <a 
         href="https://app.abacatepay.com/pay/bill_42ZJueuzwbEM5Q32RHhcfyB0" 
@@ -96,33 +87,33 @@
       </a>
     </div>
   </section>
-  <script>
-  let tempoRestante = 18 * 60;
+<script>
+  let tempoRestante = 18 * 60; // 18 minutos
 
+  const horasElemento = document.getElementById("horas");
   const minutosElemento = document.getElementById("minutos");
   const segundosElemento = document.getElementById("segundos");
 
-  function atualizarContador() {
-    const minutos = Math.floor(tempoRestante / 60);
+  function atualizarContadorTopo() {
+    const horas = Math.floor(tempoRestante / 3600);
+    const minutos = Math.floor((tempoRestante % 3600) / 60);
     const segundos = tempoRestante % 60;
 
+    horasElemento.textContent = String(horas).padStart(2, "0");
     minutosElemento.textContent = String(minutos).padStart(2, "0");
     segundosElemento.textContent = String(segundos).padStart(2, "0");
 
     if (tempoRestante <= 0) {
-      clearInterval(intervalo);
-      minutosElemento.textContent = "00";
-      segundosElemento.textContent = "00";
+      clearInterval(intervaloContador);
       return;
     }
 
     tempoRestante--;
   }
 
-  atualizarContador();
+  atualizarContadorTopo();
 
-  const intervalo = setInterval(atualizarContador, 1000);
+  const intervaloContador = setInterval(atualizarContadorTopo, 1000);
 </script>
-
 </body>
 </html>
